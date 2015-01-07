@@ -60,7 +60,7 @@
   <?php
     $dirs = [];
     $objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator('.'), RecursiveIteratorIterator::SELF_FIRST);
-    $objects->setMaxDepth(2);
+    $objects->setMaxDepth(2);//how many dirs should I crawl?
     foreach($objects as $file) {
       if(
           $file->isDir() &&
